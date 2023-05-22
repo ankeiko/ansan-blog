@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.ankeiko.live/post/fe4a69c7.html</loc>
+    
+    <lastmod>2023-05-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.ankeiko.live/about/index.html</loc>
+    
+    <lastmod>2023-05-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.ankeiko.live/categories/index.html</loc>
     
     <lastmod>2023-05-22</lastmod>
@@ -37,15 +55,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://blog.ankeiko.live/post/fe4a69c7.html</loc>
-    
-    <lastmod>2023-05-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://blog.ankeiko.live/</loc>
@@ -56,14 +65,14 @@
 
   
   <url>
-    <loc>https://blog.ankeiko.live/tags/%E6%A0%87%E7%AD%BE1/</loc>
+    <loc>https://blog.ankeiko.live/tags/Typora/</loc>
     <lastmod>2023-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.ankeiko.live/tags/%E6%A0%87%E7%AD%BE2/</loc>
+    <loc>https://blog.ankeiko.live/tags/Markdown/</loc>
     <lastmod>2023-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -72,7 +81,7 @@
 
   
   <url>
-    <loc>https://blog.ankeiko.live/categories/%E5%88%86%E7%B1%BB1/</loc>
+    <loc>https://blog.ankeiko.live/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2023-05-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
