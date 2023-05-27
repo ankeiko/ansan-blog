@@ -180,7 +180,7 @@ div#category {
 
 /* 滚动条 */
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
@@ -197,7 +197,7 @@ div#category {
 ::-moz-selection {
   color: #fff;
   background-color: #3b70fc;
-}
+} */
 
 /* 音乐播放器 */
 
