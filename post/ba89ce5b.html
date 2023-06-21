@@ -1,0 +1,274 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>docker的常用命令 | Ansan's Blog</title><meta name="author" content="Ansan"><meta name="copyright" content="Ansan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="docker的常用命令启动dockersudo systemctl start docker    帮助命令docker version   #显示docker的版本信息docker info         #显示docker的系统信息，包括镜像和容器信息的数量docker 命令 --help     #帮助命令  docker官方帮助文档 镜像命令[root@localhost ~]# doc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="docker的常用命令">
+<meta property="og:url" content="https://blog.ankeiko.live/post/ba89ce5b.html">
+<meta property="og:site_name" content="Ansan&#39;s Blog">
+<meta property="og:description" content="docker的常用命令启动dockersudo systemctl start docker    帮助命令docker version   #显示docker的版本信息docker info         #显示docker的系统信息，包括镜像和容器信息的数量docker 命令 --help     #帮助命令  docker官方帮助文档 镜像命令[root@localhost ~]# doc">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog.ankeiko.live/img/tp4.png">
+<meta property="article:published_time" content="2023-06-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-06-21T02:37:41.123Z">
+<meta property="article:author" content="Ansan">
+<meta property="article:tag" content="docker">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.ankeiko.live/img/tp4.png"><link rel="shortcut icon" href="/img/tp1.jpg"><link rel="canonical" href="https://blog.ankeiko.live/post/ba89ce5b.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'docker的常用命令',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-06-21 10:37:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/universe.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><link rel="stylesheet" href="https://cdn.cbd.int/hexo-filter-gitcalendar/lib/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Ansan's Blog" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/tp1.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 档案</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/"><i class="fa-fw fa-solid fa-star"></i><span> 追番</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/./img/tp4.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Ansan's Blog"><span class="site-name">Ansan's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 档案</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/"><i class="fa-fw fa-solid fa-star"></i><span> 追番</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">docker的常用命令</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-19T16:00:00.000Z" title="发表于 2023-06-20 00:00:00">2023-06-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-21T02:37:41.123Z" title="更新于 2023-06-21 10:37:41">2023-06-21</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="docker的常用命令"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="docker的常用命令"><a href="#docker的常用命令" class="headerlink" title="docker的常用命令"></a>docker的常用命令</h1><h2 id="启动docker"><a href="#启动docker" class="headerlink" title="启动docker"></a>启动docker</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="帮助命令"><a href="#帮助命令" class="headerlink" title="帮助命令"></a>帮助命令</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker version   #显示docker的版本信息</span><br><span class="line">docker info         #显示docker的系统信息，包括镜像和容器信息的数量</span><br><span class="line">docker 命令 --help     #帮助命令</span><br></pre></td></tr></table></figure>
+
+<p><del>docker官方帮助文档</del></p>
+<h2 id="镜像命令"><a href="#镜像命令" class="headerlink" title="镜像命令"></a>镜像命令</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# docker images#查看所以本地的主机上的镜像</span><br><span class="line">REPOSITORY    TAG       IMAGE ID       CREATED         SIZE</span><br><span class="line">hello-world   latest    feb5d9fea6a5   21 months ago   13.3kB</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">解释</span></span><br><span class="line">REPOSITORY 镜像的仓库源</span><br><span class="line">TAG        镜像的标签</span><br><span class="line">IMAGE ID   镜像的ID</span><br><span class="line">CREATD     镜像的创建时间</span><br><span class="line">SIZE       镜像的大小</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">可选项（可用--<span class="built_in">help</span>看）</span></span><br><span class="line">  -a, --all             列出所有镜像</span><br><span class="line">      --digests         Show digests</span><br><span class="line">  -q, --quiet           只显示ID</span><br></pre></td></tr></table></figure>
+
+<h5 id="docker-search-搜索镜像（dockerhub）"><a href="#docker-search-搜索镜像（dockerhub）" class="headerlink" title="docker  search 搜索镜像（dockerhub）"></a>docker  search 搜索镜像（dockerhub）</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">NAME                            DESCRIPTION</span><br><span class="line">                 STARS     OFFICIAL   AUTOMATED</span><br><span class="line">mysql                           MySQL is a widely used, open-source relation…   14234     [OK]</span><br><span class="line">mariadb                         MariaDB Server is a high performing open sou…   5439      [OK]</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">可选项（可用--<span class="built_in">help</span>看）通过搜索来过滤</span></span><br><span class="line">--filter=STARS=3000 #搜索出来的镜像就是STARS大于3000的</span><br></pre></td></tr></table></figure>
+
+<h5 id="docker-pull-下载镜像-（镜像名-tag-默认最新）"><a href="#docker-pull-下载镜像-（镜像名-tag-默认最新）" class="headerlink" title="docker pull 下载镜像 （镜像名[:tag]默认最新）"></a>docker pull 下载镜像 （镜像名[:tag]默认最新）</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# docker pull mysql</span><br><span class="line">Using default tag: latest    #如果不写tag.默认就是latest</span><br><span class="line">latest: Pulling from library/mysql</span><br><span class="line">72a69066d2fe: Pull complete  #分层下载,docker iamge的核心 联合文件系统</span><br><span class="line">93619dbc5b36: Pull complete</span><br><span class="line">99da31dd6142: Pull complete</span><br><span class="line">626033c43d70: Pull complete</span><br><span class="line">37d5d7efb64e: Pull complete</span><br><span class="line">ac563158d721: Pull complete</span><br><span class="line">d2ba16033dad: Pull complete</span><br><span class="line">688ba7d5c01a: Pull complete</span><br><span class="line">00e060b6d11d: Pull complete</span><br><span class="line">1c04857f594f: Pull complete</span><br><span class="line">4d7cfa90e6ea: Pull complete</span><br><span class="line">e0431212d27d: Pull complete</span><br><span class="line">Digest:sha256:e9027fe4d91c0153429607251656806cc784e914937271037f7738bd5b8e7709             #签名</span><br><span class="line">Status: Downloaded newer image for mysql:latest</span><br><span class="line">docker.io/library/mysql:latest  #真实地址</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">等价于它</span></span><br><span class="line"> docker pull mysql</span><br><span class="line"> docker pull docker.io/library/mysql:latest</span><br><span class="line"><span class="meta prompt_"> </span></span><br><span class="line"><span class="meta prompt_"> #</span><span class="language-bash">指定版本下载</span></span><br><span class="line"> docker pull mysql：5.7</span><br></pre></td></tr></table></figure>
+
+<h5 id="docker-rml-删除镜像"><a href="#docker-rml-删除镜像" class="headerlink" title="docker rml 删除镜像"></a>docker rml 删除镜像</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker rml -f 镜像id（单个）</span><br><span class="line">docker rml -f 镜像id 镜像id..（多个）</span><br><span class="line">docker rml -f $(docker images -aq)（全部）</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="容器命令"><a href="#容器命令" class="headerlink" title="容器命令"></a>容器命令</h2><h5 id="说明：我们有了镜像才可以创建容器"><a href="#说明：我们有了镜像才可以创建容器" class="headerlink" title="说明：我们有了镜像才可以创建容器"></a>说明：我们有了镜像才可以创建容器</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker pull centos</span><br></pre></td></tr></table></figure>
+
+<h5 id="新建容器并启动"><a href="#新建容器并启动" class="headerlink" title="新建容器并启动"></a>新建容器并启动</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run [可选参数] image</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">参数说明</span></span><br><span class="line">--name 名字  容器名字</span><br><span class="line">-d             后台方式运行</span><br><span class="line">-it            使用交互方式运行，进入容器查看内容</span><br><span class="line">-P             指定容器的端口</span><br><span class="line">  -p ip:主机名</span><br><span class="line">  -P 主机端口：容器端口(常用)</span><br><span class="line">  -P 容器端口</span><br><span class="line">  容器名字</span><br><span class="line">-p             随机指定窗口</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">测试、启动并进入容器</span></span><br><span class="line">[root@localhost ~]# docker run -it centos /bin/bash</span><br><span class="line">[root@8fbd032a161a /]# ls</span><br><span class="line">bin  etc   lib    lost+found  mnt  proc  run   srv  tmp  var</span><br><span class="line">dev  home  lib64  media       opt  root  sbin  sys  usr</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">从容器中退出主机</span></span><br><span class="line">[root@8fbd032a161a ~]# exit</span><br><span class="line">exit</span><br><span class="line">[root@localhost ~]# ls</span><br><span class="line">anaconda-ks.cfg</span><br></pre></td></tr></table></figure>
+
+<h5 id="列出所以的运行的容器"><a href="#列出所以的运行的容器" class="headerlink" title="列出所以的运行的容器"></a>列出所以的运行的容器</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">docker ps 命令</span></span><br><span class="line">    #列出当前正在运行的容器</span><br><span class="line">-a  #列出当前正在运行的容器，导出历史运行过的容器</span><br><span class="line">-n=?#显示最近创建的容器</span><br><span class="line">-q  #显示容器的编号</span><br><span class="line">[root@localhost /]# docker ps -a</span><br><span class="line">CONTAINER ID   IMAGE         COMMAND       CREATED             STATUS                         PORTS     NAMES</span><br><span class="line">8fbd032a161a   centos        &quot;/bin/bash&quot;   4 minutes ago       Exited (0) 2 minutes ago                 keen_colden</span><br><span class="line">3166b588223a   hello-world   &quot;/hello&quot;      About an hour ago   Exited (0) About an hour ago             quirky_robinson</span><br><span class="line">[root@localhost /]# docker ps</span><br><span class="line">CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES</span><br></pre></td></tr></table></figure>
+
+<h5 id="退出容器"><a href="#退出容器" class="headerlink" title="退出容器"></a>退出容器</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">exit  #直接退出</span><br><span class="line">ctrl +p +q #容器永不停止</span><br></pre></td></tr></table></figure>
+
+<h5 id="删除容器"><a href="#删除容器" class="headerlink" title="删除容器"></a>删除容器</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker rm 容器id #删除指定容器，不能删正在运行的容器，要强制删除加 -f</span><br><span class="line">docker rm -f $(docker ps -aq)#删除全部容器</span><br><span class="line">docker ps -a -q|xaegs docker rm #删除全部容器</span><br></pre></td></tr></table></figure>
+
+<h5 id="启动和停止容器的操作"><a href="#启动和停止容器的操作" class="headerlink" title="启动和停止容器的操作"></a>启动和停止容器的操作</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker start 容器id    #启动</span><br><span class="line">docker restart 容器id  #重启</span><br><span class="line">docker stop 容器id     #停止当前正在运行的容器</span><br><span class="line">docker kill 容器id     #强制停止</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="常用其他命令"><a href="#常用其他命令" class="headerlink" title="常用其他命令"></a>常用其他命令</h2><h5 id="后台启动容器"><a href="#后台启动容器" class="headerlink" title="后台启动容器"></a>后台启动容器</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">命令 docker run -d 镜像名 后台启动</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">问题docker ps，发现centos停止了</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">常见的坑，docker容器使用后台运行，就必须要有一个前台进程，docker发现没有应用，就会自动停止</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">nginx，容器启动后，发现自己没有提供服务，就会立刻停止，就是没有程序了</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker logs -tf --tail 容器</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">显示日志</span></span><br><span class="line">-tf  #查看日志</span><br><span class="line">--tail （number）#要显示日志条数</span><br></pre></td></tr></table></figure>
+
+<h5 id="查看容器中进程信息"><a href="#查看容器中进程信息" class="headerlink" title="查看容器中进程信息"></a>查看容器中进程信息</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">命令</span> </span><br><span class="line">docker top 容器id </span><br></pre></td></tr></table></figure>
+
+<h5 id="查看镜像的元数据"><a href="#查看镜像的元数据" class="headerlink" title="查看镜像的元数据"></a>查看镜像的元数据</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">命令</span></span><br><span class="line">docker inspect  容器id</span><br></pre></td></tr></table></figure>
+
+<h5 id="进入当前正在运行的容器"><a href="#进入当前正在运行的容器" class="headerlink" title="进入当前正在运行的容器"></a>进入当前正在运行的容器</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">我们通常容器都是使用后台方式运行的，需要进入容器，修改一些配置</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">命令</span></span><br><span class="line">docker exec -it 容器id bashShell #进入容器后开启一个新的终端，可以在里面操作（常用）</span><br><span class="line">docker attach 容器 #进入容器正在执行的终端，不会启动新的进程</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="从容器内拷贝文件到主机上"><a href="#从容器内拷贝文件到主机上" class="headerlink" title="从容器内拷贝文件到主机上"></a>从容器内拷贝文件到主机上</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker cp 容器id:容器内路径 目的主机路径</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="部署nginx"><a href="#部署nginx" class="headerlink" title="部署nginx"></a>部署nginx</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# docker pull nginx</span><br><span class="line">Using default tag: latest</span><br><span class="line">latest: Pulling from library/nginx</span><br><span class="line">a2abf6c4d29d: Pull complete</span><br><span class="line">a9edb18cadd1: Pull complete</span><br><span class="line">589b7251471a: Pull complete</span><br><span class="line">186b1aaa4aa6: Pull complete</span><br><span class="line">b4df32aa5a72: Pull complete</span><br><span class="line">a0bcbecc962e: Pull complete</span><br><span class="line">Digest: sha256:0d17b565c37bcbd895e9d92315a05c1c3c9a29f762b011a10c54a66cd53c9b31</span><br><span class="line">Status: Downloaded newer image for nginx:latest</span><br><span class="line">docker.io/library/nginx:latest</span><br><span class="line">[root@localhost ~]# docker images</span><br><span class="line">REPOSITORY    TAG       IMAGE ID       CREATED         SIZE</span><br><span class="line">nginx         latest    605c77e624dd   17 months ago   141MB</span><br><span class="line">mysql         latest    3218b38490ce   18 months ago   516MB</span><br><span class="line">hello-world   latest    feb5d9fea6a5   21 months ago   13.3kB</span><br><span class="line">centos        latest    5d0da3dc9764   21 months ago   231MB</span><br><span class="line">[root@localhost ~]# docker run -d --name nginx01 -p 3344:80 nginx</span><br><span class="line">88ed367e89cf5cf45dd2d025ebab0efcb90f455d6bc78d9bc0fd93b28ce56432</span><br><span class="line">[root@localhost ~]# docker ps</span><br><span class="line">CONTAINER ID   IMAGE     COMMAND                   CREATED          STATUS         PORTS</span><br><span class="line">   NAMES</span><br><span class="line">88ed367e89cf   nginx     &quot;/docker-entrypoint.…&quot;   10 seconds ago   Up 8 seconds   0.0.0.0:3344-&gt;80/tcp, :::3344-&gt;80/tcp   nginx01</span><br><span class="line">[root@localhost ~]# curl localhost:3344</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;title&gt;Welcome to nginx!&lt;/title&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">html &#123; color-scheme: light dark; &#125;</span><br><span class="line">body &#123; width: 35em; margin: 0 auto;</span><br><span class="line">font-family: Tahoma, Verdana, Arial, sans-serif; &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;h1&gt;Welcome to nginx!&lt;/h1&gt;</span><br><span class="line">&lt;p&gt;If you see this page, the nginx web server is successfully installed and</span><br><span class="line">working. Further configuration is required.&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;For online documentation and support please refer to</span><br><span class="line">&lt;a href=&quot;http://nginx.org/&quot;&gt;nginx.org&lt;/a&gt;.&lt;br/&gt;</span><br><span class="line">Commercial support is available at</span><br><span class="line">&lt;a href=&quot;http://nginx.com/&quot;&gt;nginx.com&lt;/a&gt;.&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;&lt;em&gt;Thank you for using nginx.&lt;/em&gt;&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h2><h5 id="portainer"><a href="#portainer" class="headerlink" title="portainer"></a>portainer</h5><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -d -p 8088:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock --privileged=true portainer/portainer</span><br></pre></td></tr></table></figure>
+
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/docker/">docker</a></div><div class="post_share"><div class="social-share" data-image="/./img/tp4.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/post/d0fdd847.html" title="Linux的基础命令"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/tp9.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Linux的基础命令</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/tp1.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Ansan</div><div class="author-info__description">ankeiko</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ankeiko"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://ankeiko.github.io/ansan-blog/" target="_blank" title="博客"><i class="fa-solid fa-user"></i></a><a class="social-icon" href="https://github.com/ankeiko" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:2948799266@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到ankeiko的博客！💕💕💕</div><div class="xpand" style="height:200px;"><canvas class="illo" width="800" height="800" style="max-width: 200px; max-height: 200px; touch-action: none; width: 640px; height: 640px;"></canvas></div><script src="https://fastly.jsdelivr.net/gh/xiaopengand/blogCdn@latest/xzxr/twopeople1.js"></script><script src="https://fastly.jsdelivr.net/gh/xiaopengand/blogCdn@latest/xzxr/zdog.dist.js"></script><script id="rendered-js" src="https://fastly.jsdelivr.net/gh/xiaopengand/blogCdn@latest/xzxr/twopeople.js"></script><style>.card-widget.card-announcement {
+margin: 0;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+canvas {
+display: block;
+margin: 0 auto;
+cursor: move;
+}</style></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#docker%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">docker的常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8docker"><span class="toc-text">启动docker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A9%E5%91%BD%E4%BB%A4"><span class="toc-text">帮助命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%95%9C%E5%83%8F%E5%91%BD%E4%BB%A4"><span class="toc-text">镜像命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#docker-search-%E6%90%9C%E7%B4%A2%E9%95%9C%E5%83%8F%EF%BC%88dockerhub%EF%BC%89"><span class="toc-text">docker  search 搜索镜像（dockerhub）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#docker-pull-%E4%B8%8B%E8%BD%BD%E9%95%9C%E5%83%8F-%EF%BC%88%E9%95%9C%E5%83%8F%E5%90%8D-tag-%E9%BB%98%E8%AE%A4%E6%9C%80%E6%96%B0%EF%BC%89"><span class="toc-text">docker pull 下载镜像 （镜像名[:tag]默认最新）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#docker-rml-%E5%88%A0%E9%99%A4%E9%95%9C%E5%83%8F"><span class="toc-text">docker rml 删除镜像</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">容器命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E%EF%BC%9A%E6%88%91%E4%BB%AC%E6%9C%89%E4%BA%86%E9%95%9C%E5%83%8F%E6%89%8D%E5%8F%AF%E4%BB%A5%E5%88%9B%E5%BB%BA%E5%AE%B9%E5%99%A8"><span class="toc-text">说明：我们有了镜像才可以创建容器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E5%AE%B9%E5%99%A8%E5%B9%B6%E5%90%AF%E5%8A%A8"><span class="toc-text">新建容器并启动</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E6%89%80%E4%BB%A5%E7%9A%84%E8%BF%90%E8%A1%8C%E7%9A%84%E5%AE%B9%E5%99%A8"><span class="toc-text">列出所以的运行的容器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%80%E5%87%BA%E5%AE%B9%E5%99%A8"><span class="toc-text">退出容器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%AE%B9%E5%99%A8"><span class="toc-text">删除容器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E5%92%8C%E5%81%9C%E6%AD%A2%E5%AE%B9%E5%99%A8%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-text">启动和停止容器的操作</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4"><span class="toc-text">常用其他命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%90%8E%E5%8F%B0%E5%90%AF%E5%8A%A8%E5%AE%B9%E5%99%A8"><span class="toc-text">后台启动容器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97"><span class="toc-text">查看日志</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%AE%B9%E5%99%A8%E4%B8%AD%E8%BF%9B%E7%A8%8B%E4%BF%A1%E6%81%AF"><span class="toc-text">查看容器中进程信息</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E9%95%9C%E5%83%8F%E7%9A%84%E5%85%83%E6%95%B0%E6%8D%AE"><span class="toc-text">查看镜像的元数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E5%BD%93%E5%89%8D%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%E7%9A%84%E5%AE%B9%E5%99%A8"><span class="toc-text">进入当前正在运行的容器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%8E%E5%AE%B9%E5%99%A8%E5%86%85%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6%E5%88%B0%E4%B8%BB%E6%9C%BA%E4%B8%8A"><span class="toc-text">从容器内拷贝文件到主机上</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2nginx"><span class="toc-text">部署nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-text">可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#portainer"><span class="toc-text">portainer</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/ba89ce5b.html" title="docker的常用命令"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/tp4.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="docker的常用命令"/></a><div class="content"><a class="title" href="/post/ba89ce5b.html" title="docker的常用命令">docker的常用命令</a><time datetime="2023-06-19T16:00:00.000Z" title="发表于 2023-06-20 00:00:00">2023-06-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/d0fdd847.html" title="Linux的基础命令"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/tp9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux的基础命令"/></a><div class="content"><a class="title" href="/post/d0fdd847.html" title="Linux的基础命令">Linux的基础命令</a><time datetime="2023-06-11T02:43:22.000Z" title="发表于 2023-06-11 10:43:22">2023-06-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/0.html" title="javaScript的学习笔记"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/tp6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="javaScript的学习笔记"/></a><div class="content"><a class="title" href="/post/0.html" title="javaScript的学习笔记">javaScript的学习笔记</a><time datetime="2023-05-27T16:20:22.000Z" title="发表于 2023-05-28 00:20:22">2023-05-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/fe4a69c7.html" title="Typora的使用说明（上）"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/tp7.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Typora的使用说明（上）"/></a><div class="content"><a class="title" href="/post/fe4a69c7.html" title="Typora的使用说明（上）">Typora的使用说明（上）</a><time datetime="2023-05-15T16:42:22.000Z" title="发表于 2023-05-16 00:42:22">2023-05-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/4a17b156.html" title="Hello World"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/tp8.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/post/4a17b156.html" title="Hello World">Hello World</a><time datetime="2023-05-15T15:31:39.166Z" title="发表于 2023-05-15 23:31:39">2023-05-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Ansan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">💕谢谢你的观看！💕</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="2219809098" data-server="netease" data-type="playlist"   data-order="list" data-fixed="true" data-preload="auto" data-autoplay="false" data-mutex="true" ></div><canvas id="universe"></canvas><script defer src="/js/universe.js"></script><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="true"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    if(parent_div_git) {
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var qweather_key = 'b16a1fa0e63c46a4b8f28abfb06ae3fe';
+  var gaud_map_key = 'e2b04289e870b005374ee030148d64fd&s=rsv3';
+  var baidu_ak_key = 'undefined';
+  var flag = 0;
+  var clock_rectangle = '112.982279,28.19409';
+  var clock_default_rectangle_enable = 'false';
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><script data-pjax src="https://cdn.cbd.int/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+  function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+      }
+
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://gh-calendar.rschristian.dev/user/ankeiko",['#e4dfd7', '#f9f4dc', '#f7e8aa', '#f7e8aa', '#f8df72', '#fcd217', '#fcc515', '#f28e16', '#fb8b05', '#d85916', '#f43e06'],'ankeiko')
+    }
+  </script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script></body></html>
