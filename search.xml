@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>WinRAR安装与破解</title>
+      <link href="/post/1.html"/>
+      <url>/post/1.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="WinRAR安装破解版"><a href="#WinRAR安装破解版" class="headerlink" title="WinRAR安装破解版"></a>WinRAR安装破解版</h1><p>可以直接去下载 <strong>7-Zip</strong> 就不用那么麻烦搞下面的了（）</p><h3 id="一、下载无广告版WinRAR"><a href="#一、下载无广告版WinRAR" class="headerlink" title="一、下载无广告版WinRAR"></a>一、下载无广告版WinRAR</h3><p><img src="C:\Users\29487\AppData\Roaming\Typora\typora-user-images\image-20231003211042726.png" alt="image-20231003211042726"></p><p><img src="C:\Users\29487\AppData\Roaming\Typora\typora-user-images\image-20231003211111111.png" alt="image-20231003211111111"></p><blockquote><p><a href="https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20230808/wrr/winrar-x64-623sc.exe">https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20230808/wrr/winrar-x64-623sc.exe</a></p><p>点击下载安装到你想安装到的目录</p></blockquote><h3 id="二、破解WinRAR"><a href="#二、破解WinRAR" class="headerlink" title="二、破解WinRAR"></a>二、破解WinRAR</h3><p><img src="C:\Users\29487\AppData\Roaming\Typora\typora-user-images\image-20231003220333736.png" alt="image-20231003220333736"><img src="C:\Users\29487\AppData\Roaming\Typora\typora-user-images\image-20231003220358999.png" alt="image-20231003220358999"></p><blockquote><p>右键进入终端,然后输入下面的东西</p></blockquote><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">winrar-keygen-x64.exe &quot;nicheng&quot; &quot;nicheng&quot; &gt; rarreg.key</span><br></pre></td></tr></table></figure><blockquote><p>得到下面文件</p></blockquote><p><img src="C:\Users\29487\AppData\Roaming\Typora\typora-user-images\image-20231003221713147.png" alt="image-20231003221713147"></p><blockquote><p>把这个文件放在你安装WinRAR的目录下面，就破解成功了</p></blockquote><h3 id="三、安装WinRAR主题"><a href="#三、安装WinRAR主题" class="headerlink" title="三、安装WinRAR主题"></a>三、安装WinRAR主题</h3><p><img src="C:\Users\29487\AppData\Roaming\Typora\typora-user-images\image-20231003211326806.png" alt="image-20231003211326806"></p><p><img src="C:\Users\29487\AppData\Roaming\Typora\typora-user-images\image-20231003211528138.png" alt="image-20231003211528138"></p><blockquote><p>1、选择你喜欢的主题</p><p>2、普通下载安装到你想安装到的目录</p><p>3、打开刚刚下载的压缩包</p></blockquote><p><img src="C:\Users\29487\AppData\Roaming\Typora\typora-user-images\image-20231003215626907.png" alt="image-20231003215626907"><img src="C:\Users\29487\AppData\Roaming\Typora\typora-user-images\image-20231003215655739.png" alt="image-20231003215655739"></p><blockquote><p>4、然后点击左上角选项主题更换为刚刚下载的主题就好了</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 安装笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> WinRAR </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>docker的常用命令</title>
       <link href="/post/ba89ce5b.html"/>
       <url>/post/ba89ce5b.html</url>
