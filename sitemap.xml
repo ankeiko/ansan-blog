@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.ankeiko.live/post/1.html</loc>
+    <loc>https://blog.ankeiko.live/post/366b5a13.html</loc>
+    
+    <lastmod>2023-10-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.ankeiko.live/post/5ad5bc15.html</loc>
     
     <lastmod>2023-10-03</lastmod>
     
@@ -23,24 +32,6 @@
     <loc>https://blog.ankeiko.live/post/ba89ce5b.html</loc>
     
     <lastmod>2023-06-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.ankeiko.live/post/0.html</loc>
-    
-    <lastmod>2023-06-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.ankeiko.live/post/4a17b156.html</loc>
-    
-    <lastmod>2023-05-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -101,6 +92,27 @@
 
   
   <url>
+    <loc>https://blog.ankeiko.live/tags/Linux/</loc>
+    <lastmod>2023-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.ankeiko.live/tags/WinRAR/</loc>
+    <lastmod>2023-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.ankeiko.live/tags/docker/</loc>
+    <lastmod>2023-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.ankeiko.live/tags/Typora/</loc>
     <lastmod>2023-10-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -116,27 +128,6 @@
   
   <url>
     <loc>https://blog.ankeiko.live/tags/js/</loc>
-    <lastmod>2023-10-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.ankeiko.live/tags/docker/</loc>
-    <lastmod>2023-10-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.ankeiko.live/tags/Linux/</loc>
-    <lastmod>2023-10-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.ankeiko.live/tags/WinRAR/</loc>
     <lastmod>2023-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
